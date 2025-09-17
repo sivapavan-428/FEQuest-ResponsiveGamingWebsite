@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Oxanium", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-clr: #000;
+    --text-clr: #fff;
+    --design-clr: #ccf305;
+    --card-bg: #0e1712;
+}
+
+body {
+    background: var(--bg-clr);
+}
+h1{
+    font-size: 5.2vw;
+    line-height: 5.7vw;
+}
+h2{
+    font-size: 3.7vw;
+
+}
+h3{
+    font-size: 1.7vw;
+}
+p{
+    text-wrap: balance;
+    color: rgba(255, 255, 255,0.7);
+    margin-block: 1rem;
+    line-height: 1.8rem;
+    
+}
+h1,h2,h3,h4,h5{
+    color: var(--text-clr);
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.navbar {
+    height: 13vh;
+    justify-content: space-between;
+
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: var(--design-clr);
+    z-index: 4;
+}
+
+.border-btn, .fill-btn {
+    padding: 0.7rem 1.5rem;
+    border: 0.1rem solid var(--design-clr);
+    font-weight: bold;
+    color: var(--design-clr);
+    text-transform: uppercase;
+     transition: 0.3s ease-in-out;
+}
+
+.link {
+    color: var(--text-clr);
+    font-family: "Poppins", sans-serif;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.navlist {
+    gap: 2.5rem;
+}
+
+.container {
+    max-width: 85%;
+    margin: auto;
+}
+
+.hamburger {
+    display: none;
+}
+
+li .border-btn {
+    display: none;
+    transition: 0.3s ease-in-out;
+}
+
+.border-btn:hover{
+    background-color: var(--design-clr);
+    color: var(--bg-clr);
+}
+
+.fill-btn{
+    background-color: var(--design-clr);
+    color: var(--bg-clr);
+}
+.fill-btn:hover{
+    background-color:var(--bg-clr);
+    color:  var(--design-clr);
+}
+
+.fill-btn::before{
+    content: "";
+    position: absolute;
+    background: var(--design-clr);
+    filter: blur(15px);
+}
+
+.hero{
+    min-height: calc(100vh - 13vh);
+}
+
+.btn-container{
+    gap: 2rem;
+    margin-top: 2.3rem;
+}
+
+
+
+
+
+@media screen and (max-width:700px) {
+    .hamburger {
+        display: block;
+    }
+
+    .border-btn {
+        display: none;
+    }
+
+    .navlist {
+        position: absolute;
+        flex-direction: column;
+        background-color: var(--card-bg);
+        top: 0;
+        bottom: 0;
+        left: 0;
+        justify-content: center;
+        align-items: center;
+        width: 20rem;
+        z-index: 3;
+        transform: translateX(-100%);
+        transition: 0.3s ease-in-out;
+    }
+
+    .list-active {
+        transform: translateX(0%);
+    }
+
+     li .border-btn {
+        display: block;
+    }
+}

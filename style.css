@@ -132,7 +132,21 @@ li .border-btn {
     margin-top: 2.3rem;
 }
 
+img{
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    opacity: 0.7;
+    object-fit: cover;
+}
 
+.content{
+    flex: 1;
+}
+
+.image-container{
+    flex: 1;
+}
 
 
 
@@ -143,6 +157,9 @@ li .border-btn {
 
     .border-btn {
         display: none;
+    }
+    .btn-container .border-btn{
+        display: block;
     }
 
     .navlist {
@@ -166,5 +183,16 @@ li .border-btn {
 
      li .border-btn {
         display: block;
+    }
+    .column{
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .hero{
+        padding-block: 2.5rem;
+    }
+    h1{
+        font-size: 9vw;
+        line-height: 12vw;
     }
 }

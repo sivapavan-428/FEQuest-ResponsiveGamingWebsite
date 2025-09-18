@@ -16,8 +16,10 @@ html {
 :root {
     --bg-clr: #000;
     --text-clr: #fff;
-    --design-clr: #ccf305;
+    --design-clr:  #73b4df;
     --card-bg: #0e1712;
+    /* #ccf305 */
+   
 }
 
 body {
@@ -82,6 +84,7 @@ li {
 .flex {
     display: flex;
     align-items: center;
+
 }
 
 .navlist {
@@ -125,6 +128,10 @@ li .border-btn {
 
 .hero{
     min-height: calc(100vh - 13vh);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
 }
 
 .btn-container{
@@ -136,8 +143,10 @@ img{
     display: inline-block;
     width: 100%;
     height: auto;
-    opacity: 0.7;
+    opacity: 1;
     object-fit: cover;
+    padding-left: 50px;
+   
 }
 
 .content{
@@ -194,5 +203,12 @@ img{
     h1{
         font-size: 9vw;
         line-height: 12vw;
+    }
+    img{
+        padding-left: 0px;
+        margin-left: 15%;
+        width: 70%;
+        height: auto;
+        align-items: center;
     }
 }
